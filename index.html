@@ -17,7 +17,19 @@
         <li>Home</li>
         <li>About Us</li>
         <li>Information</li>
-        <li>More &or;</li>
+        <li class="more">More&or;</li>
+        <li class="search-container">
+          <input
+            type="text"
+            name="search-container"
+            id="search-container"
+            placeholder="Search..."
+            class="search-input"
+          />
+          <button class="search-btn">
+            <img src="/assets/search-logo.svg" alt="search-button" />
+          </button>
+        </li>
       </ul>
     </div>
     <div class="hamburger">
@@ -31,16 +43,26 @@
     Social Share
    -->
   <div class="social-share">
-    <img class="whatsapp" src="#" alt="" />
-    <img class="facebook" src="#" alt="" />
-    <img class="twitter" src="#" alt="" />
+    <a href="#" class="social-icon">
+      <img class="whatsapp" src="/assets/whatsapp.svg" alt="Link to Whatsapp" />
+    </a>
+    <a href="#" class="social-icon">
+      <img class="facebook" src="/assets/facebook.svg" alt="Link to Facebook" />
+    </a>
+    <a href="#" class="social-icon">
+      <img class="twitter" src="/assets/twitter.svg" alt="Link to Twitter" />
+    </a>
   </div>
 
   <!-- 
     Floating Help
    -->
   <div class="floating-help">
-    <img class="helpline" src="#" alt="" />
+    <img
+      class="helpline"
+      src="/assets/helpline.svg"
+      alt="Customer 24/7 Helpline"
+    />
   </div>
 
   <!-- 
@@ -54,7 +76,7 @@
         </div>
         <div class="right-card">
           <textarea class="text-area" readonly>
-It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a .....</textarea
+It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a ......</textarea
           >
         </div>
       </div>
@@ -91,7 +113,24 @@ It's not only writers who can benefit from this free online tool. If you're a pr
     </section>
 
     <section class="section-2">
-      <div class="info"></div>
+      <div class="info-card">
+        <div class="info-left">
+          <div class="categories cat-1">YOUR INFO</div>
+          <div class="categories cat-2">BOOKMARKS</div>
+          <div class="categories cat-3">SETTINGS</div>
+        </div>
+        <div class="info-right">
+          <h1>Your information</h1>
+          <p id="name"><strong>Name :</strong> Atul Singhal</p>
+          <p id="email"><strong>Email :</strong> atul@gmail.com</p>
+          <p id="phone"><strong>Phone :</strong> +91 8131424888</p>
+          <p id="marks"><strong>Marks :</strong> 500.00</p>
+          <button class="next-btn">
+            Next
+            <img src="/assets/next-arrow.svg" alt="Next Button Arrow" />
+          </button>
+        </div>
+      </div>
     </section>
   </body>
 </html>

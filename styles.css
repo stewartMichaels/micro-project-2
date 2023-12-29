@@ -1,9 +1,13 @@
 /* 
 Global Settings
 */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&family=Delius+Unicase:wght@700&family=Inter:wght@500&family=Roboto:wght@400;500&display=swap");
+
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  font-size: 28px;
 }
 
 body {
@@ -18,21 +22,56 @@ Navbar Styles
 
 .navbar {
   display: flex;
-  background-color: blue;
+  background-color: #6f6af7;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 50px;
   color: white;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.logo {
+  font-family: "Delius Unicase", cursive;
+  font-size: 61px;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 10px;
+  gap: 50px;
+}
+
+/* Search Bar */
+.search-container {
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.search-btn {
+  background-color: #fff;
+  border: none;
+  padding: 5px 20px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#search-container {
+  border: none;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  width: 314px;
+  height: 40px;
+  padding: 5px 20px;
+  color: #9f9f9f;
+  font-size: 24px;
 }
 
 .hamburger {
@@ -42,10 +81,36 @@ Navbar Styles
 
 .line {
   display: block;
-  width: 30px;
+  width: 35px;
   height: 3px;
   background-color: #fff;
   margin: 6px 0;
+}
+
+/* Social Share */
+.social-share {
+  display: flex;
+  flex-direction: column;
+  top: 300px;
+  position: sticky;
+  right: 0;
+  width: 90px;
+  z-index: 999;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: block;
+}
+
+/* Helpline */
+.helpline {
+  width: 120px;
+  position: fixed;
+  bottom: 0;
+  right: 100px;
+  z-index: 999;
 }
 
 /* 
@@ -55,35 +120,37 @@ SECTION 1
 .hero-section {
   display: flex;
   align-items: center;
+  /* Removing the extra margin or padding created while adding the social share */
+  margin-top: -100px;
 }
 
 /* Left Card */
 
 .left-card {
-  width: 30vh;
-  height: 300px;
+  width: 456px;
+  height: 507px;
   margin: 50px auto;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1), -10px 0 20px rgba(0, 0, 0, 0.1),
     0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .left-card-image {
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nfGVufDB8fDB8fHww");
+  background-image: url("/assets/image\ 4.svg");
   background-size: cover;
   background-position: center;
 }
 
 /* Right Card */
 .right-card {
-  width: 60%;
-  height: 300px;
+  width: 972px;
+  height: 507px;
   margin: 50px auto;
-  padding: 20px;
-  background-color: pink;
-  border-radius: 10px;
+  padding: 30px;
+  background-color: #e5d8ff;
+  border-radius: 20px;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1), -10px 0 20px rgba(0, 0, 0, 0.1),
     0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -94,26 +161,33 @@ SECTION 1
   border: none;
   resize: none;
   outline: none;
+  font-size: 28px;
+  font-weight: normal;
+  color: #6f7373;
 }
 
 /* Cards Section */
 .cards-section {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 80px;
 }
 
 .card {
-  width: 200px;
-  height: 100px;
+  width: 340px;
+  height: 145px;
   overflow: hidden;
   border-radius: 10px;
   margin: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1), -10px 0 20px rgba(0, 0, 0, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.1);
   display: inline-block;
   vertical-align: top;
   text-align: left;
+  letter-spacing: 4px;
 }
 
 .card-content {
@@ -128,23 +202,148 @@ SECTION 1
 
 .cards-section h3,
 .cards-section p {
-  font-size: medium;
-  font-weight: 400;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 /* Card Colors */
 .card-1 {
-  background-color: aqua;
+  background-color: #929dff;
 }
 
 .card-2 {
-  background-color: blueviolet;
+  background-color: #734cf2;
 }
 
 .card-3 {
-  background-color: pink;
+  background-color: #d288ff;
 }
 
 .card-4 {
   background-color: black;
+}
+
+/* 
+SECTION - 2
+*/
+
+.section-2 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.info-card {
+  background-color: #483eff;
+  width: 1542px;
+  height: 717px;
+  border: none;
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Section */
+
+.info-left {
+  margin-left: 30px;
+}
+
+/* Categories */
+
+.cat-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  background-color: #bce0f6;
+  height: 133px;
+  width: 397px;
+  border: none;
+  border-radius: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cat-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  background-color: tr;
+  height: 133px;
+  border: 5px solid white;
+  border-radius: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+}
+
+.cat-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 50px; */
+  background-color: tr;
+  height: 133px;
+  border: 5px solid white;
+  border-radius: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Right Section */
+
+.info-right {
+  background-color: white;
+  margin-right: 30px;
+  width: 1000px;
+  height: 656px;
+  border: none;
+  border-radius: 20px;
+  color: #04285a;
+  padding: 100px;
+  position: relative;
+}
+
+.info-right h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 38px;
+  letter-spacing: 10px;
+}
+
+.info-right p > strong {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.info-right p {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  padding: 10px;
+  padding-left: 50px;
+}
+
+#name {
+  padding-top: 50px;
+}
+
+.next-btn {
+  border: none;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
 }
