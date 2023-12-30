@@ -166,6 +166,7 @@ SECTION 1
   font-size: 28px;
   font-weight: normal;
   color: #6f7373;
+  overflow: hidden;
 }
 
 /* Cards Section */
@@ -245,6 +246,7 @@ SECTION - 2
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
 }
 
 /* Left Section */
@@ -283,6 +285,7 @@ SECTION - 2
   font-size: 35px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 
 .cat-3 {
@@ -297,6 +300,7 @@ SECTION - 2
   font-size: 35px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 
 /* Right Section */
